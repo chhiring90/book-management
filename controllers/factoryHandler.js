@@ -23,6 +23,8 @@ exports.getOne = Model => catchAsync(async (req, res, next) => {
     const doc = await Model.findById(req.params.id);
     if (!doc) return next(new AppError('No doc found with that ID', 404));
 
+    console.log(doc);
+
     res.status(200).json({
         status: 'success',
         data: {
@@ -46,6 +48,8 @@ exports.updateOne = Model => catchAsync(async (req, res, next) => {
         runValidators: true,
         new: true,
     });
+
+    if(!doc) next(new AppError('Cannot updated doc with that ID', 400))
 
     res.status(200).json({
         status: 'success',

@@ -9,7 +9,7 @@ router.route('/')
 
 router.route('/:id')
     .get(bookController.getBook)
-    .delete(bookController.deleteBook)
-    .patch(bookController.updateBook);
+    .patch(bookController.updateBook)
+    .delete(bookController.deleteBook);
 
 module.exports = router;

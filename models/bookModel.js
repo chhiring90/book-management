@@ -11,7 +11,7 @@ const bookSchema = new mongoose.Schema({
     isbn: {
         type: Number,
         required: [true, 'Book must have an ISBN number.'],
-        unique: true
+        unique: true,
     },
     createdAt: {
         type: Date,

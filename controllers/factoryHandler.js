@@ -42,7 +42,7 @@ exports.createOne = Model => catchAsync(async (req, res, next) => {
 });
 
 exports.updateOne = Model => catchAsync(async (req, res, next) => {
-    const dov = await Model.findByIdAndUpdate(req.params.id, req.body, {
+    const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
         runValidators: true,
         new: true,
     });
@@ -50,7 +50,7 @@ exports.updateOne = Model => catchAsync(async (req, res, next) => {
     res.status(200).json({
         status: 'success',
         data: {
-            data: dov
+            data: doc
         }
     });
 });

@@ -11,6 +11,10 @@ const bookSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Book must have an ISBN number.'],
         unique: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
     }
 }, {
     toJSON: { virtual: true },

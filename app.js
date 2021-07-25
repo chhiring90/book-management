@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'));
 }
 
+app.use(cors());
 //  Body parser
 app.use(express.json({ limit: '10kb' }));
 
@@ -22,8 +23,7 @@ app.use(xss());
 app.use("/api/v1/books", bookRoutes);
 
 // Errors
-
-app.use('*', (req, res, next) => {
+app.all('*', (req, res, next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 

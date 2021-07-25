@@ -20,6 +20,6 @@ mongoose
     .catch(err => console.log(err));
 
 const port = process.env.PORT || 5000
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(chalk.blueBright(`App started to run on port: ${chalk.green(port)} successfully`));
 });

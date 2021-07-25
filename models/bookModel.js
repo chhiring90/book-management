@@ -5,6 +5,7 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Book must have a name.'],
         minLength: [4, 'A Book must have a minimum length of 4 characters.'],
+        unique: true
     },
     slug: String,
     isbn: {

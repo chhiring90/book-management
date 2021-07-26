@@ -1,0 +1,38 @@
+:root {
+    --purple: #9381ff;
+    --blue: #17c3b2;
+    --clay: #ffcb77;
+    --clay-light: #fef9ef;
+    --rose: #fe6d73;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--clay-light);
+    color: var(--bs-dark);
+}
+
+#page {
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+.header {
+    padding: 40px 0 20px;
+}
+
+/* Accordion */
+
+.accordion-button {
+    color: var(--gray-black);
+    font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--purple);
+    background-color: transparent;
+}
+
+.accordion-button:focus {
+    background-color: transparent;
+}

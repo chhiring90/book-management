@@ -21,6 +21,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.use(cors());
 
+app.use(express.static(('public')));
+
 const limiter = rateLimit({
     max: 100,
     windowMs: 60 * 60 * 1000,

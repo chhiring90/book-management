@@ -8,4 +8,5 @@ npm init
 ```
 Development: npm run dev
 Production: npm run prod
-Debug : npm run debug```
+Debug : npm run debug
+```

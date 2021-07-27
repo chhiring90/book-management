@@ -5,6 +5,7 @@ Minimal Book Management System
 npm init
 
 ## Usage
-> Development: npm run dev
-> Production: npm run prod
-> Debug : npm run debug
+```
+Development: npm run dev
+Production: npm run prod
+Debug : npm run debug```

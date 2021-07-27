@@ -1,38 +1,125 @@
 :root {
-    --purple: #9381ff;
-    --blue: #17c3b2;
-    --clay: #ffcb77;
-    --clay-light: #fef9ef;
-    --rose: #fe6d73;
+  --purple: #9381ff;
+  --blue: #17c3b2;
+  --clay: #ffcb77;
+  --clay-light: #fef9ef;
+  --rose: #fe6d73;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: var(--clay-light);
-    color: var(--bs-dark);
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--clay-light);
+  color: var(--bs-dark);
+  font-weight: 600;
 }
 
 #page {
-    overflow-x: hidden;
-    min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: 320px;
 }
 
 .header {
-    padding: 40px 0 20px;
+  padding: 40px 0 20px;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #d63384;
+}
+
+.textarea-copy {
+  opacity: 0;
+  position: absolute;
+  left: -100%;
+  bottom: -100%;
+}
+
+.btn-primary {
+  padding: 12px 15px;
+  font-weight: 600;
+  background-color: var(--purple);
+  border: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--rose) !important;
+  box-shadow: none !important;
+
 }
 
 /* Accordion */
 
+.accordion-header {
+  line-height: 1.52;
+}
+
 .accordion-button {
-    color: var(--gray-black);
-    font-weight: 700;
+  color: var(--gray-black);
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--purple);
-    background-color: transparent;
+  color: var(--purple);
+  background-color: transparent;
 }
 
 .accordion-button:focus {
-    background-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #ddeeff;
+}
+
+.accordion-body .list-unstyled {
+  font-size: 16px;
+}
+
+.accordion-body .list-unstyled li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--clay);
+  border-radius: 10px;
+  position: relative;
+}
+
+.accordion-body .list-unstyled strong {
+  font-weight: 900;
+  color: var(--bs-gray);
+  padding-right: 10px;
+}
+
+.accordion-body .list-unstyled a {
+  color: var(--gray-black);
+  text-decoration: none;
+  transition: 0.1s ease-in;
+}
+
+.accordion-body .list-unstyled a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion-body .list-unstyled a:hover,
+.accordion-body .list-unstyled a > code {
+  color: #d63384;
+}
+
+.accordion-body .list-unstyled .fa-copy {
+  margin-right: 10px;
+}
+
+.code-block {
+  background: #111111;
+  padding: 20px;
+  margin-bottom: 20px;
 }
